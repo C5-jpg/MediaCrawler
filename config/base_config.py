@@ -19,9 +19,15 @@
 
 # 基础配置
 PLATFORM = "xhs"  # 平台，xhs | dy | ks | bili | wb | tieba | zhihu
-KEYWORDS = "编程副业,编程兼职"  # 关键词搜索配置，以英文逗号分隔
+# 【核心修改 1】关键词矩阵 (对应：机会成本、激励扭曲、边际效用、沉没成本)
+KEYWORDS = "精致穷,分期免息,月光族自救,以贷养贷,买完后悔,闲置出,冲动消费,为了凑单,来都来了,每天只要,智商税"
+
 LOGIN_TYPE = "qrcode"  # qrcode or phone or cookie
-COOKIES = ""
+
+# 【核心修改 2】你的专用 Cookie (已修复换行符错误，压平为单行)
+COOKIES = "abRequestId=c5411602-7e9b-5790-8266-94aa544156f1; xsecappid=xhs-pc-web; a1=19a9a03ca79me58a3xj6g0d6g3kd606k9pwn9kl9s50000121446; webId=a9fd826d258bbf4446b9a76c142d6263; gid=yj0j08qdWYjWyj0j08qS0UT1Wj6d2Y0qCVKkEjM8fK8KTj888yJy44K80JDSiiij; web_session=040069b662bfb624757e0835173b4b0ae83639; acw_tc=0a00dea017638779843363088e44e8dac1e667cc050da3fbb2ce9ce0d095f4; webBuild=4.86.0; loadts=1763877984989; websectiga=10f9a40ba454a07755a08f27ef8194c53637eba4551cf9751c009d9afb564467; sec_poison_id=649a9c83-60ff-43d2-98a9-118d5a672766; unread={%22ub%22:%22691a142d0000000004002fdc%22%2C%22ue%22:%2268ff77c5000000000301d347%22%2C%22uc%22:25}"
+
+
 CRAWLER_TYPE = (
     "search"  # 爬取类型，search(关键词搜索) | detail(帖子详情)| creator(创作者主页数据)
 )
@@ -71,7 +77,7 @@ BROWSER_LAUNCH_TIMEOUT = 60
 AUTO_CLOSE_BROWSER = True
 
 # 数据保存类型选项配置,支持四种类型：csv、db、json、sqlite, 最好保存到DB，有排重的功能。
-SAVE_DATA_OPTION = "json"  # csv or db or json or sqlite
+SAVE_DATA_OPTION = "csv"  # csv or db or json or sqlite
 
 # 用户浏览器缓存的浏览器文件配置
 USER_DATA_DIR = "%s_user_data_dir"  # %s will be replaced by platform name
@@ -80,7 +86,7 @@ USER_DATA_DIR = "%s_user_data_dir"  # %s will be replaced by platform name
 START_PAGE = 1
 
 # 爬取视频/帖子的数量控制
-CRAWLER_MAX_NOTES_COUNT = 15
+CRAWLER_MAX_NOTES_COUNT = 50
 
 # 并发爬虫数量控制
 MAX_CONCURRENCY_NUM = 1
