@@ -18,8 +18,8 @@
 # 使用本代码即表示您同意遵守上述原则和LICENSE中的所有条款。
 
 # 基础配置
-PLATFORM = "xhs"  # 平台，xhs | dy | ks | bili | wb | tieba | zhihu
-# 【核心修改 1】关键词矩阵 (对应：机会成本、激励扭曲、边际效用、沉没成本)
+PLATFORM = "xhs"  
+# 关键词矩阵 (对应：机会成本、激励扭曲、边际效用、沉没成本)
 KEYWORDS = "精致穷,分期免息,月光族自救,以贷养贷,买完后悔,闲置出,冲动消费,为了凑单,来都来了,每天只要,智商税"
 
 LOGIN_TYPE = "qrcode"  # qrcode or phone or cookie
